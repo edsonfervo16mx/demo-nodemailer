@@ -1,0 +1,17 @@
+{
+  "name": "demo-nodemailer",
+  "version": "1.0.0",
+  "description": "demo-nodemailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemailer"
+  },
+  "keywords": [
+    "nodemailer"
+  ],
+  "author": "edsonfervo16mx",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
