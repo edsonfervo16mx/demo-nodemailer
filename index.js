@@ -11,9 +11,10 @@ async function main() {
   
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: process.env.SERVIDOR,
+      //host: process.env.SERVIDOR,
       port: 587,
       secure: false, // true for 465, false for other ports
+      service:"Gmail",
       auth: {
         user: process.env.EMAIL, // generated ethereal user
         pass: process.env.PASSWORD, // generated ethereal password
@@ -25,8 +26,8 @@ async function main() {
   
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"no-reply-events " <no-reply-events@caribbeandigitalgroup.com>', // sender address
-      to: "j.gomez@caribbeandigitalgroup.com", // list of receivers
+      from: '"CDG-Gcashless " <e.ventura@caribbeandigitalgroup.com>', // sender address
+      to: "j.gomez@caribbeandigitalgroup.com,edson55_@hotmail.com", // list of receivers
       subject: "Hello with nodemailer", // Subject line
       text: "Hello world", // plain text body
       html: "<b>Hello world?, Test</b>", // html body
